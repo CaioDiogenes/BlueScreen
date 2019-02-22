@@ -1,0 +1,15 @@
+body{
+    padding: 0px;
+    margin: 0px;
+}
+
+img{
+    width: auto;
+    height: auto;
+    z-index: -1;
+}
+
+dl{
+    z-index: 2;
+    float: left;
+}
