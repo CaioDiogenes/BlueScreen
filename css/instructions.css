@@ -1,0 +1,125 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+
+.bg-image {
+    background-image: url("../assets/nostalgic-wallpapers-25266-9356888.jpg");
+    filter: blur(4px);
+    -webkit-filter: blur(4px);    
+    height: 100%; 
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .box{
+    position: relative;
+    width: 600px;
+    height: 600px;
+    display: flex;
+  }
+
+  .box .content{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    bottom:10px;
+    right: 10px;
+    padding: 20px;
+    overflow: hidden;
+    text-align: center;
+  }
+
+  .box .content:before{
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: rgba(255,255,255,.1);
+      transition: 0.5s;
+      pointer-events: none;
+  }
+
+  .box:hover .content:before{
+      left: -50%;
+  }
+
+  .box .content h2 
+  {
+    margin: 0 0 10px;
+    padding: 0;
+    color: black;      
+  }
+
+  .box .content p 
+  {
+    margin: 0;
+    padding: 0;
+    color: black;
+  }
+
+  .box span
+  {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+    pointer-events: none;
+   
+    }
+.box span:before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background: rgba(255,255,255,.7);
+    transform-origin: left;
+    transition: 0.5s;
+}
+
+.box:hover span::before
+{
+    transform: scaleX(0)
+}
+
+.box span:nth-child(even):before
+{
+    transform-origin: right;
+    transition-delay: 0.5s;
+}
+
+.box span:nth-child(1)
+{
+    transform: rotate(0deg)
+}
+
+.box span:nth-child(2)
+{
+    transform: rotate(90deg)
+}
+
+.box span:nth-child(3)
+{
+    transform: rotate(180deg)
+}
+
+.box span:nth-child(4)
+{
+    transform: rotate(270deg)
+}
+
+
