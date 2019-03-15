@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css.css" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <button class="botao1" onclick="showMe()">Para que serve este botao</button>
+    <div class="principal">
+        <div class="circuloGrande">
+            <div class="escudoPequeno">
+                <div class="star">
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function showMe() {
+            if (confirm("\t Eu nao sei \n Da 10 ae professor \n Clica no icone do facebook")) {
+                document.getElementById('demo').style.display = 'block';
+            }
+        }
+    </script>
+
+
+    <div class="after" id="demo" style="display:none">
+        <div class="text"> Clica no icone do facebook </div>
+        <ul>
+            <li>
+                <a href="https://www.facebook.com/Kaiio.DvC">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span class="fa fa-facebook" aria-hidden="true"></span>
+                </a>
+            </li>
+        </ul>
+
+    </div>
+
+</body>
+
+</html>
