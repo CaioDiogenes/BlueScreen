@@ -1,23 +1,23 @@
 var ctx = null;
 var GameMap = [
 	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-	0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0,
+	0, 1, 1, 1, 1, 1, 1, 3, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0,
 	0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 0,
 	0, 1, 8, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0,
+	0, 3, 0, 1, 0, 1, 0, 3, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 0,
+	0, 3, 1, 1, 1, 1, 1, 1, 1, 3, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0,
+	0, 3, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 0,
+	0, 3, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0,
+	0, 1, 0, 1, 0, 1, 0, 3, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 0,
+	0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0,
+	0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 0,
+	0, 1, 1, 1, 1, 1, 1, 3, 1, 1, 1, 1, 3, 1, 1, 1, 1, 1, 1, 0,
 	0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 0,
 	0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0,
 	0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 0,
-	0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0,
-	0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 0,
-	0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0,
-	0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 0,
-	0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0,
-	0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 0,
-	0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0,
-	0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 0,
-	0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0,
-	0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 0,
-	0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0,
+	0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 3, 1, 1, 1, 1, 1, 1, 0,
+	0, 1, 0, 1, 0, 1, 0, 1, 0, 3, 0, 1, 0, 1, 0, 1, 0, 1, 0, 0,
+	0, 1, 1, 1, 1, 1, 1, 1, 1, 3, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0,
 	0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 8, 0, 0,
 	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
 ];
@@ -30,12 +30,13 @@ var tileset = null, backImg = "assets/img.png", tilesetLoaded = false;;
 var floorTypes = {
 	solid: 0,
 	path: 1,
+	ice: 3,
 	portal: 8
 };
 var tileTypes = {
-	0: { color: "#685b48", floor: floorTypes.solid, sprite: [{ x: 0, y: 0, w: 40, h: 40 }] },
-	1: { color: "#5aa457", floor: floorTypes.path, sprite: [{ x: 40, y: 0, w: 40, h: 40 }] },
-	3: { color: "#286625", floor: floorTypes.solid, sprite: [{ x: 200, y: 0, w: 40, h: 40 }] },
+	0: { color: "#30b4e0", floor: floorTypes.solid, sprite: [{ x: 40, y: 40, w: 40, h: 40 }] },
+	1: { color: "#30c0e8", floor: floorTypes.path, sprite: [{ x: 160, y: 0, w: 40, h: 40 }] },
+	3: { color: "#286625", floor: floorTypes.ice, sprite: [{ x: 160, y: 40, w: 40, h: 40 }] },
 	4: {
 		color: "#678fd9", floor: floorTypes.solid, sprite: [
 			{ x: 0, y: 80, w: 40, h: 40, d: 200 }, { x: 40, y: 80, w: 40, h: 40, d: 200 },
@@ -129,6 +130,12 @@ Bomberman.prototype.processMovement = function (t) {
 			window.location.href = "file:///D:/documents/Douglas/Teste/thirdPhase.html"
 		}
 
+		if (tileFloor == floorTypes.ice) {
+			this.delayMove = 50;
+		} else {
+			this.delayMove = 100;
+		}
+
 	}
 	else {
 		this.position[0] = (this.tileFrom[0] * tileWidth) + ((tileWidth - this.dimensions[0]) / 2);
@@ -152,6 +159,7 @@ Bomberman.prototype.processMovement = function (t) {
 Bomberman.prototype.canMoveTo = function (x, y) {
 	if (x < 0 || x >= mapWidth || y < 0 || y >= mapHeight) { return false; }
 	if (tileTypes[GameMap[toIndex(x, y)]].floor != floorTypes.path &&
+		tileTypes[GameMap[toIndex(x,y)]].floor!=floorTypes.ice &&
 		tileTypes[GameMap[toIndex(x, y)]].floor != floorTypes.portal) { return false; }
 	return true;
 };
@@ -168,9 +176,8 @@ Bomberman.prototype.canMoveUp = function () { return this.canMoveTo(this.tileFro
 Bomberman.prototype.canMoveDown = function () { return this.canMoveTo(this.tileFrom[0], this.tileFrom[1] + 1); };
 Bomberman.prototype.canMoveLeft = function () { return this.canMoveTo(this.tileFrom[0] - 1, this.tileFrom[1]); };
 Bomberman.prototype.canMoveRight = function () { return this.canMoveTo(this.tileFrom[0] + 1, this.tileFrom[1]); };
-Bomberman.prototype.canMoveDirection = function(d) {
-	switch(d)
-	{
+Bomberman.prototype.canMoveDirection = function (d) {
+	switch (d) {
 		case directions.up:
 			return this.canMoveUp();
 		case directions.down:
@@ -187,9 +194,8 @@ Bomberman.prototype.moveLeft = function (t) { this.tileTo[0] -= 1; this.timeMove
 Bomberman.prototype.moveRight = function (t) { this.tileTo[0] += 1; this.timeMoved = t; this.direction = directions.right; };
 Bomberman.prototype.moveUp = function (t) { this.tileTo[1] -= 1; this.timeMoved = t; this.direction = directions.up; };
 Bomberman.prototype.moveDown = function (t) { this.tileTo[1] += 1; this.timeMoved = t; this.direction = directions.down; };
-Bomberman.prototype.moveDirection = function(d, t) {
-	switch(d)
-	{
+Bomberman.prototype.moveDirection = function (d, t) {
+	switch (d) {
 		case directions.up:
 			return this.moveUp(t);
 		case directions.down:
