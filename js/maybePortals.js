@@ -8,17 +8,17 @@ Bomberman.prototype.processMovement = function (t) {
 		var tileFloor = tileTypes[GameMap[toIndex(this.tileFrom[0], this.tileFrom[1])]].floor;
 
 		if (tileFloor == floorTypes.secondPhase) {
-			window.location.href = "file:///D:/documents/Douglas/BlueScreen/secondPhase.html"
+			window.location.href = "secondPhase.html"
         }
         
         if (tileFloor == floorTypes.fakeBlock) {
             window.alert("Ohhh no it's a trap, try again bro!")
-			window.location.href = "file:///D:/documents/Douglas/BlueScreen/index.html"
+			window.location.href = "index.html"
         }   
         
         if (tileFloor == floorTypes.portal) {
             window.alert("Good Try. But ins't this!")
-			window.location.href = "file:///D:/documents/Douglas/BlueScreen/index.html"
+			window.location.href = "index.html"
 		}
 
 	}

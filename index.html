@@ -5,50 +5,35 @@
     <title>BomberMan The Great Labyrinth of emptiness </title>
     <meta name="description" content="HTML5 game written in JavaScript with help of EaselJS library">
     <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
-    <link rel="stylesheet" href="css/style.css">
     <script src="js/js.js"></script>
     <script src="js/playerOne.js"></script>
     <script src="js/maybePortals.js"></script>
     <script src="js/countDown.js"></script>
-    <script src="js/modal.js"></script>
-
+    <Style>
+        html{background-color: #000; color: #fff;}
+        .page-header{text-align: center; margin-bottom: 50px;}
+        .howToPlay, ul{float: left;}
+        .historia, p{float: right;}
+        p{margin-left: 75%;margin-top: -20%;}
+    </Style>
 </head>
 
 <body>
     <div class="container">
         <div class="page-header">
-            <h1><i class="html5"><span>HTML5</span></i> Bomber<strong>man</strong></h1>
+            <h1><i class="html5"><span>HTML5</span></i> Bomber<strong>man</strong><br>The Great Labyrinth of Emptiness</h1>
         </div>
 
-        <h3>How to play</h3>
-        <progress value="0" max="60" id="progressBar"></progress>
-        <div id="demo"></div>
-        <div class="mt"></div>
-        <canvas id="game" width="400" height="400"></canvas>
-
+        <canvas id="game" width="600" height="400"></canvas>
+        <h3 class="howToPlay">How to play</h3>
         <ul>
             <li><strong>arrow keys</strong> &hellip; move</li>
             <li><strong>spacebar / alt</strong> &hellip; plant the bomb</li>
         </ul>
-
-        <i><strong>M</strong> &hellip; mute / unmute sound</i><br>
-        <i><strong>enter</strong> &hellip; restart</i><br>
-        <i><strong>escape</strong> &hellip; menu</i>
-
-        <hr>
-    </div>
-
-    <div id="my-modal" class="modal">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h2>Oh no...</h2>
-            </div>
-            <div class="modal-body">
-                <p>The time's up... we can't go to the gate, good try child you played fine ;) </p>
-                <p>To go back, touch outside of this modal</p>
-            </div>
-        </div>
-        
+        <h3 class="historia">Historia</h3>
+        <p>Oh não, após sua ultima jornada para salvar o universo Bomberman acaba em um lugar misterioso,
+            sem mais suas bombas para poder escapar desse lugar desconhecido, agora cansado e faminto tudo 
+            o que lhe resta é usar de seu incrível senso de direção e sua incrível memória para escapar. </p>
     </div>
 </body>
 
