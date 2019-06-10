@@ -28,7 +28,7 @@ Bomberman.prototype.canMoveTo = function (x, y) {
 	if (tileTypes[GameMap[toIndex(x, y)]].floor != floorTypes.path &&
 		tileTypes[GameMap[toIndex(x, y)]].floor != floorTypes.portal &&
 		tileTypes[GameMap[toIndex(x, y)]].floor != floorTypes.fakeBlock &&
-		tileTypes[GameMap[toIndex(x, y)]].floor != floorTypes.truePortal) { return false; }
+		tileTypes[GameMap[toIndex(x, y)]].floor != floorTypes.secondPhase) { return false; }
 	return true;
 };
 
