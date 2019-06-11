@@ -28,7 +28,9 @@ Bomberman.prototype.canMoveTo = function (x, y) {
 	if (tileTypes[GameMap[toIndex(x, y)]].floor != floorTypes.path &&
 		tileTypes[GameMap[toIndex(x, y)]].floor != floorTypes.portal &&
 		tileTypes[GameMap[toIndex(x, y)]].floor != floorTypes.fakeBlock &&
-		tileTypes[GameMap[toIndex(x, y)]].floor != floorTypes.secondPhase) { return false; }
+		tileTypes[GameMap[toIndex(x, y)]].floor != floorTypes.secondPhase &&
+		tileTypes[GameMap[toIndex(x, y)]].floor != floorTypes.thirdPhase &&
+		tileTypes[GameMap[toIndex(x, y)]].floor != floorTypes.credts) { return false; }
 	return true;
 };
 
@@ -179,9 +181,6 @@ function drawGame() {
 		sprite[0].x, sprite[0].y, sprite[0].w, sprite[0].h,
 		viewport.offset[0] + player.position[0], viewport.offset[1] + player.position[1],
 		player.dimensions[0], player.dimensions[1]);
-
-	ctx.fillStyle = "#ff0000";
-	ctx.fillText("FPS: " + framesLastSecond, 10, 20);
 
 	lastFrameTime = currentFrameTime;
 	requestAnimationFrame(drawGame);

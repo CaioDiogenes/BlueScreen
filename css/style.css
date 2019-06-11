@@ -1,40 +1,49 @@
-p {
-    text-align: center;
-    font-size: 60px;
-    margin-top: 0px;
+  html{
+    color: #fff;
   }
-
   .mt{
       margin: 24px;
   }
 
   :root {
     --modal-duration: 1s;
-    --modal-color: #428bca;
   }
+
+  .column{
+    text-align: center;
+  }
+
+  /* html{
+    background-color: #000;
+     color: #fff;
+    }
+
+  .page-header{
+    text-align: center;
+     margin-bottom: 50px;
+    }
+
+  .howToPlay, ul{
+    float: left;
+  }
+
+  .historia, p
+  {float: right;
+  }
+
+  p{
+    margin-left: 75%;
+    margin-top: -20%;
+  } */
   
   body {
     font-family: Arial, Helvetica, sans-serif;
-    background: #f4f4f4;
-    font-size: 17px;
+    background-color: black;
+    /* font-size: 17px; */
     line-height: 1.6;
-    display: flex;
     height: 100vh;
     align-items: center;
     justify-content: center;
-  }
-  
-  .button {
-    background: #428bca;
-    padding: 1em 2em;
-    color: #fff;
-    border: 0;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  .button:hover {
-    background: #3876ac;
   }
   
   .modal {
@@ -46,7 +55,7 @@ p {
     height: 100%;
     width: 100%;
     overflow: auto;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.99);
   }
   
   .modal-content {
@@ -63,7 +72,7 @@ p {
   }
   
   .modal-header {
-    background: red;
+    background: #e4605e;
     padding: 15px;
     color: black;
     border-top-left-radius: 5px;
@@ -72,23 +81,24 @@ p {
   
   .modal-body {
     padding: 10px 20px;
-    background: #c0c0c0;
+    background: #f5f5f5;
+    color: black;
   }
   
   .modal-footer {
     background: var(--modal-color);
     padding: 10px;
-    color: #fff;
+    color: black;
     text-align: center;
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
   }
   
   .close {
-    color: #ccc;
+    color: black;
     float: right;
     font-size: 30px;
-    color: #fff;
+    color: black;
   }
   
   .close:hover,
@@ -106,4 +116,57 @@ p {
       opacity: 1;
     }
   }
+  * {
+    box-sizing: border-box;
+  }
   
+  /* This styles we catch from w3schools ALL OF THIS */
+
+  body {
+    margin: 0;
+    background-color: black;
+  }
+  
+  /* Style the header */
+  .header {
+    background-color: black;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  /* Create three unequal columns that floats next to each other */
+  .column {
+    float: left;
+    padding: 10px;
+  }
+  
+  /* Left and right column */
+  .column.side {
+    width: 25%;
+  }
+  
+  /* Middle column */
+  .column.middle {
+    width: 50%;
+  }
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 600px) {
+    .column.side, .column.middle {
+      width: 100%;
+    }
+  }
+  
+  /* Style the footer */
+  .footer {
+    background-color: black;
+    padding: 10px;
+    text-align: center;
+  }

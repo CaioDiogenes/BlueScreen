@@ -1,0 +1,102 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+  }
+  body{
+    background: #000;
+  }
+  .container{
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 100%;
+  }
+  .container span{
+    text-transform: uppercase;
+    display: block;
+  }
+  .text1{
+    color: white;
+    font-size: 48px;
+    font-weight: 700;
+    letter-spacing: 8px;
+    margin-bottom: 20px;
+    background: black;
+    position: relative;
+    animation: text 3s 1;
+  }
+  .text2{
+    font-size: 30px;
+    color: #6ab04c;
+  }
+  
+  @keyframes text {
+    0%{
+      color: black;
+      margin-bottom: -40px;
+    }
+    30%{
+      letter-spacing: 25px;
+      margin-bottom: -40px;
+    }
+    85%{
+      letter-spacing: 8px;
+      margin-bottom: -40px;
+    }
+  }
+  
+
+html,body{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+  }
+  .b1{
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    background: url("../assets/startGame.jpg") no-repeat 50% 50%;
+    top: 0;
+    display: table;
+    background-size: cover;
+  }
+  .b1 .in1{
+    display: table-cell;
+    vertical-align: middle;
+    width: 100%;
+    max-width: none;
+  }
+  .content{
+    max-width: 500px;
+    margin: auto;
+    text-align: center;
+  }
+  .content h1{
+    font-family: 'Century Gothic',sans-serif;
+    color: #f9f3f4;
+    font-size: 500%;
+    text-shadow: 0 0 300px #000;
+  }
+  .content .btn{
+    border-radius: 9px;
+    color: #f9f3f4;
+    text-decoration: none;
+    font-family: 'Century Gothic',sans-serif;
+    border: 3px solid;
+    padding: 7px 13px;
+    font-weight: bold;
+  }
+  .content .btn:hover{
+    color: #2196f3;
+  }
+  p{
+    font-size: 160%;
+    line-height: 200%;
+    text-align: justify;
+    margin: 3%;
+    font-family: sans-serif;
+  }

@@ -34,7 +34,11 @@ var floorTypes = {
 	block: 9,
 	truePortal: 8,
 	fakeBlock: 9,
-	secondPhase: 6
+	secondPhase: 6,
+	thirdPhase: 12,
+	invisibleWall: 10,
+	slime: 15 ,
+	credts: 13
 };
 var tileTypes = {
 	0: { color: "#685b48", floor: floorTypes.solid, sprite: [{ x: 0, y: 0, w: 40, h: 40 }] },
