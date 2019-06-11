@@ -37,20 +37,7 @@ var tileTypes = {
 	0: { color: "#30b4e0", floor: floorTypes.solid, sprite: [{ x: 40, y: 40, w: 40, h: 40 }] },
 	1: { color: "#30c0e8", floor: floorTypes.path, sprite: [{ x: 160, y: 0, w: 40, h: 40 }] },
 	3: { color: "#286625", floor: floorTypes.ice, sprite: [{ x: 160, y: 40, w: 40, h: 40 }] },
-	4: {
-		color: "#678fd9", floor: floorTypes.solid, sprite: [
-			{ x: 0, y: 80, w: 40, h: 40, d: 200 }, { x: 40, y: 80, w: 40, h: 40, d: 200 },
-			{ x: 80, y: 80, w: 40, h: 40, d: 200 }, { x: 40, y: 80, w: 40, h: 40, d: 200 },
-			{ x: 0, y: 80, w: 40, h: 40, d: 200 }, { x: 40, y: 80, w: 40, h: 40, d: 200 },
-			{ x: 80, y: 80, w: 40, h: 40, d: 200 }, { x: 40, y: 80, w: 40, h: 40, d: 200 },
-			{ x: 0, y: 80, w: 40, h: 40, d: 200 }, { x: 40, y: 80, w: 40, h: 40, d: 200 },
-			{ x: 80, y: 80, w: 40, h: 40, d: 200 }, { x: 40, y: 80, w: 40, h: 40, d: 200 },
-			{ x: 0, y: 80, w: 40, h: 40, d: 200 }, { x: 40, y: 80, w: 40, h: 40, d: 200 },
-			{ x: 80, y: 80, w: 40, h: 40, d: 200 }, { x: 120, y: 80, w: 40, h: 40, d: 200 },
-			{ x: 160, y: 80, w: 40, h: 40, d: 200 }, { x: 200, y: 80, w: 40, h: 40, d: 200 },
-			{ x: 240, y: 80, w: 40, h: 40, d: 200 }, { x: 280, y: 80, w: 40, h: 40, d: 200 },
-		]
-	},
+	4: { color: "#286625", floor: floorTypes.solid, sprite: [{ x: 320, y: 0, w: 40, h: 40 }] },
 	8: { color: "#286625", floor: floorTypes.portal, sprite: [{ x: 0, y: 40, w: 40, h: 40 }] },
 };
 
