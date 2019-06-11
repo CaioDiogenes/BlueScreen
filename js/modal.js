@@ -1,7 +1,7 @@
 //sound for timer less 10 seconds
 
 var door = new Audio('assets/door.wav');
-var title = new Audio('assets/title.wav');
+var title = new Audio('assets/stageTheme.mp3');
 
 // I forgot to change the name... modal with countdown
 title.play();
